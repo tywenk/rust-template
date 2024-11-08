@@ -20,10 +20,6 @@ link-check:
 test:
 	cargo nextest run
 
-# Run bacon on the codebase
-bacon:
-  bacon clippy -- -W clippy::pedantic
-
 # Sets up a watcher that lints, tests, and builds
 watch:
 	cargo watch -c -x 'clippy --all-targets --all-features -- -W clippy::pedantic -D warnings' -x 'nextest run' -x 'build --release'
